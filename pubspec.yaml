@@ -1,0 +1,106 @@
+name: sari_store
+description: Sari-Sari Store Management System – Offline-first POS & Inventory.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State Management
+  riverpod: ^2.5.1
+  flutter_riverpod: ^2.5.1
+  riverpod_annotation: ^2.3.5
+
+  # Navigation
+  go_router: ^14.2.0
+
+  # Database (Drift ORM – type-safe SQLite)
+  drift: ^2.16.1
+  sqlite3_flutter_libs: ^0.5.18
+  path_provider: ^2.1.2
+  path: ^1.9.0
+
+  # Local Storage (Hive for light caching)
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+
+  # Security (Password hashing)
+  crypto: ^3.0.3
+  flutter_secure_storage: ^9.2.2
+
+  # UI / UX
+  fl_chart: ^0.68.0                # Charts & graphs
+  google_fonts: ^6.2.1             # Clean typography
+  font_awesome_flutter: ^10.7.0    # Icons
+  shimmer: ^3.0.0                  # Loading skeletons
+  animated_notch_bottom_bar: ^1.0.0 # Smooth bottom nav (or use NavigationBar)
+
+  # Printing & Export
+  pdf: ^3.10.8                     # PDF generation
+  printing: ^5.11.1                # Print & share PDF
+  csv: ^6.0.0                      # CSV export
+  excel: ^4.0.2                    # Excel export
+  open_filex: ^4.4.0               # Open exported files
+
+  # Barcode Scanning (camera-based for Linux/Android)
+  mobile_scanner: ^4.0.1           # Works on desktop with camera
+
+  # Date/Time Utilities
+  intl: ^0.19.0
+
+  # Permissions (camera, storage)
+  permission_handler: ^11.3.1
+
+  # Logging & Crash reporting (offline-safe, file-based)
+  logger: ^2.3.0
+
+  # Utilities
+  uuid: ^4.4.0                     # Generate unique IDs
+  collection: ^1.18.0              # Collection extensions
+  freezed_annotation: ^2.4.1       # Immutable models
+  json_annotation: ^4.9.0          # JSON serialization
+
+dev_dependencies:
+  flutter_launcher_icons: ^0.13.1
+  
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+  # Drift Dev Tools
+  drift_dev: ^2.16.1
+  build_runner: ^2.4.9
+
+  # Freezed & JSON code generation
+  freezed: ^2.5.2
+  json_serializable: ^6.8.0
+
+  # Testing utilities
+  riverpod_generator: ^2.4.0
+  mocktail: ^1.0.3
+  integration_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  # Add local fonts if needed
+  # fonts:
+  #   - family: SariStoreIcons
+  #     fonts:
+  #       - asset: assets/fonts/SariStoreIcons.ttf
+
+  assets:
+    # Placeholder for store logo, images, etc.
+    - assets/images/
+  
+flutter_launcher_icons:
+  android: true
+  ios: false # not targeting iOS
+  image_path: "assets/images/app_icon.png"
+  linux: true
+  windows: true
