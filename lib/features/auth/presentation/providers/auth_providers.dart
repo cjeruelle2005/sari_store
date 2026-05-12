@@ -46,7 +46,6 @@ final getCurrentUserUseCaseProvider = Provider<GetCurrentUserUseCase>((ref) {
   return GetCurrentUserUseCase(ref.watch(authRepositoryProvider));
 });
 
-// --- Auth State Notifier ---
 // We'll manage the logged-in user and loading state.
 // --- AuthState ---
 @immutable
